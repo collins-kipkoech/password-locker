@@ -3,7 +3,7 @@ class User:
     """
     class to create new user
     """
-    user_details = []
+    user_list = []
 
     def __init__(self,username,password):
         self.username = username
@@ -12,19 +12,22 @@ class User:
         defined an init method to initialize the user attributes
         """
 
-new_user = User('collins','12345')
-# print(new_user.username)
 
-    def save_details(self):
-        User.user_details.append(self)
+
+    def save_user_details(self):
+        User.user_list.append(self)
         """
         method to save user details in the list
         """
 
-    def delete_details(self):
+    def delete_user_details(self):
         '''
         method to delete user details
         '''
         User.user_list.remove(self)
+
+    @classmethod
+    def display_user_details(cls):
+        return cls.user_list
 
     
