@@ -1,3 +1,4 @@
+import pyperclip
 class User:
     """
     class to create new user
@@ -17,6 +18,13 @@ new_user = User('collins','12345')
     def save_details(self):
         User.user_details.append(self)
         """
-        method to save user details in the list"""
+        method to save user details in the list
+        """
+
+    def delete_details(self):
+        '''
+        method to delete user details
+        '''
+        User.user_list.remove(self)
 
     
