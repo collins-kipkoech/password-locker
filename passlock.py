@@ -1,4 +1,4 @@
-import pyperclip
+
 class User:
     """
     class to create new user
@@ -41,7 +41,7 @@ class Credentials:
     def __init__(self,account,username,password):
         self.account = account
         self.username = username
-        self.password = passoword
+        self.password = password
         """
         method to initialize user credential details
         """
@@ -64,6 +64,15 @@ class Credentials:
         method to display user credentials in the list
         """
         return cls.credentials_list
+
+    @classmethod
+    def find_credential(cls, account):
+        """
+        Method to find the user credentials
+        """
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
 
     
 
