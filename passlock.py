@@ -38,7 +38,7 @@ class Credentials:
 
     credentials_list = []
 
-    def __init__(self,account,username,passowrd):
+    def __init__(self,account,username,password):
         self.account = account
         self.username = username
         self.password = passoword
@@ -57,6 +57,13 @@ class Credentials:
         method to delete credentials from the credentials list
         """
         Credentials.credentials_list.remove(self)
+
+    @classmethod
+    def show_credentials(cls):
+        """
+        method to display user credentials in the list
+        """
+        return cls.credentials_list
 
     
 
