@@ -5,7 +5,7 @@ By Collins Kipkoech
 
 Description
 
-Python application that allow users to generate and store passwords for various platforms.
+Python application that allow users to create, login, store and delete information
 
 Cloning
 
