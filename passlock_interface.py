@@ -119,7 +119,7 @@ def passlocker():
                         print("list of all your accounts: ")
                         print('\n')
 
-                        for credential in display_account_credentials():
+                        for credentials in display_account_credentials():
                             print(f"Account Name:{username}")
 
                     else:
@@ -143,8 +143,8 @@ def passlocker():
                     print("Enter Account Name:")
                     delete_acc = input()
 
-                    if delete_credentials_account(delete_acc):
-                        return delete_credentials_account(delete_acc)
+                    if delete_credentials(delete_acc):
+                        return delete_credentials(delete_acc)
 
                     else:
                         print(f"{delete_acc} does not exist")
